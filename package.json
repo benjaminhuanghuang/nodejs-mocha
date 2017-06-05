@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-mocha",
+  "version": "1.0.0",
+  "description": "$ npm install mocha -g     $ npm install co-mocha",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "co-fs": "^1.2.0",
+    "co-mocha": "^1.2.0",
+    "should": "^11.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminhuanghuang/nodejs-mocha.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminhuanghuang/nodejs-mocha/issues"
+  },
+  "homepage": "https://github.com/benjaminhuanghuang/nodejs-mocha#readme"
+}
