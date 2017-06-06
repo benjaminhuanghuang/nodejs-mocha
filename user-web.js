@@ -5,9 +5,11 @@ var data = require('./user-data.js');
 
 var app = module.exports = new koa();
 
+// Can not get users
 router.get('/user', function(ctx){
     console.log(data.users.get());
-    ctx.body = data.users.get();
+    //ctx.body = data.users.get();
+    ctx.body = "asdfasdfsdf";
 })
 
 // app.use(ctx => {
