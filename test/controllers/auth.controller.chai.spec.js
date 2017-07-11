@@ -3,6 +3,10 @@ var authController = require("../../controllers/auth.controller");
 var expect = require('chai').expect;
 var should = require('chai').should();
 
+var chai = require('chai');
+var chaiAsPromised = require('chai-as-promised');
+chai.use(chaiAsPromised);
+chai.should();
 
 describe('AuthController Test : ', () => {
     // Hooks
@@ -11,7 +15,7 @@ describe('AuthController Test : ', () => {
         authController.setRoles(['user']);
     });
 
-    
+
     describe('isAuthorized: ', () => {
         it('Should return false if not authorized', function () {
             var isAuth = authController.isAuthorized(['user'], 'admin');
@@ -41,6 +45,12 @@ describe('AuthController Test : ', () => {
                 assert.equal(false, isAuth);
                 done();
             });
+        });
+    })
+
+    describe('isAuthorizedPromise: ', () => {
+        it('Should return false if not authorized', function () {
+            authController.isAuthorizedPromise('admin').should.eventually.be.false;
         });
     })
 });

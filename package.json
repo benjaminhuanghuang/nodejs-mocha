@@ -11,6 +11,7 @@
     "co-fs": "^1.2.0",
     "co-mocha": "^1.2.0",
     "chai": "4.0.2",
+    "chai-as-promised": "~7.1.1",
     "co-supertest": "^0.0.10",
     "koa": "^2.2.0",
     "koa-route": "^3.2.0",
@@ -20,7 +21,8 @@
     "supertest": "^3.0.0"
   },
   "scripts": {
-    "test": "mocha ./test/controllers/*.spec.js"
+    "test": "mocha ./test/controllers/*.spec.js",
+    "mocha-demo": "mocha ./test/mocha-demo-spec.js"
   },
   "repository": {
     "type": "git",

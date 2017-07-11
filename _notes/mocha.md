@@ -6,6 +6,7 @@
 ## Dependencies
     Mocha
     Chai :  for asserts
+    chai-as-promised
     Sinon : for mocking
     istanbul : for code coverage
 
