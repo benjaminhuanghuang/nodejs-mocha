@@ -10,6 +10,7 @@
   "devDependencies": {
     "co-fs": "^1.2.0",
     "co-mocha": "^1.2.0",
+    "chai": "4.0.2",
     "co-supertest": "^0.0.10",
     "koa": "^2.2.0",
     "koa-route": "^3.2.0",
@@ -19,7 +20,7 @@
     "supertest": "^3.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./test/controllers/*.spec.js"
   },
   "repository": {
     "type": "git",
