@@ -2,6 +2,7 @@ var assert = require('assert');
 var authController = require("../../controllers/auth.controller");
 var expect = require('chai').expect;
 var should = require('chai').should();
+var sinon = require('sinon');
 
 var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
@@ -51,6 +52,21 @@ describe('AuthController Test : ', () => {
     describe('isAuthorizedPromise: ', () => {
         it('Should return false if not authorized', function () {
             authController.isAuthorizedPromise('admin').should.eventually.be.false;
+        });
+    })
+
+    describe('getIndex: ', () => {
+        it('Should render index', function () {
+            //stubbing function
+            var isAuth = sinon.stub(user, 'isAuthorized').return(true);
+            var req = {user: user};
+            var res = {
+                render: sinon.spy()
+            };
+            authController.getIndex(req, res);
+            isAuth.calledOnce.should.be.true;           //test the function
+            res.render.calledOnce.should.be.true;
+            res.render.firstCall.args[0].should.equal('index');
         });
     })
 });

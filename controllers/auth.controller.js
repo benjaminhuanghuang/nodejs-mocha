@@ -23,11 +23,18 @@ function AuthController() {
         });
     }
 
+    function getIndex(req, res)
+    {
+        res.render('index');
+        //res.render('index'); cause error
+    }
+
     return {
         isAuthorized,
         isAuthorizedAsync,
         setRoles,
-        isAuthorizedPromise
+        isAuthorizedPromise,
+        getIndex
     };
 }
 

@@ -4,11 +4,13 @@
     Managing what tests execute
 
 ## Dependencies
-    Mocha
-    Chai :  for asserts
+    mocha
+    chai :  for asserts. expect or should
     chai-as-promised
-    Sinon : for mocking
+    sinon : for mocking. sinon.spy() gives a fake function
     istanbul : for code coverage
+        $ npm install -g istanbul
+        $ istanbul cover node_modules/.bin/_mocha -- tests/**/*.spec.js
 
 
 ## Install mocha globally AND locally
