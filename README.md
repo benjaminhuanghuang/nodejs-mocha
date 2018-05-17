@@ -24,9 +24,12 @@ No test files found
 
 ## Assertion Library
 ```
-    npm i expect -S
+    npm i expect -D
 ```
-
+## Spy
+```
+    npm i rewire -D
+```
 
 ## Support generator
     $ npm install co-mocha
